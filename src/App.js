@@ -12,6 +12,8 @@ function App() {
       <header className="App-header">
         <h1>EV cars</h1>
       </header>
+      <Nav />
+      <Login />
     </div>
   );
 }
