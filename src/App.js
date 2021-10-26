@@ -1,4 +1,10 @@
 import './App.css';
+import Nav from './components/Nav';
+import Cars from './components/Cars';
+import CarItem from './components/CarItem';
+import Appoinment from './components/Appoinment';
+import Login from './components/Login';
+
 
 function App() {
   return (
