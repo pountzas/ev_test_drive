@@ -1,60 +1,67 @@
 import React from 'react'
 import axios from 'axios'
+import Cookies from 'universal-cookie';
 
 const baseUrl = 'https://ev-backend-api.herokuapp.com/users'
+const signUp= 'https://ev-backend-api.herokuapp.com/signup'
+const cookies = new Cookies();
 
 class Login extends React.Component {
   state = {
-    form:{
-        username: ''
+    form: {
+      username: ''
     }
   }
 
   handleChange = async e => {
     await this.setState({
-        form:{
-            ...this.state.form,
-            [e.target.name]: e.target.value
-        }
+      form: {
+        ...this.state.form,
+        [e.target.name]: e.target.value
+      }
     });
   }
 
   session = async () => {
-    await axios.get(baseUrl, {params: { username: this.state.form.username } })
-    .then(res => {
-      console.log(res.data)
-      return res.data;
-    })
-    .then(res => {
-      if (res.length > 0) {
-        let user = res[0]
-        // console.log(user)
-      }
-      else {
-        alert('user not found')
-      }
-    })
-    .catch(error=>{
-      console.log(error);
-    })
+    await axios.get(baseUrl)
+      .then(response => {
+        return response.data;
+      })
+      .then(response => {
+        const res = response.users;
+        if (res.find(e => e.username === this.state.form.username.toLowerCase())) {
+          alert(`Welcome ${this.state.form.username}`);
+          cookies.set('username', this.state.form.username.toLowerCase(), {path: "/"});
+        } else {
+          const body= { username: this.state.form.username.toLowerCase() };
+          axios.post(signUp, body)
+          .then(response => {
+            return response.data;
+          })
+          .then(response => {
+            cookies.set('username', this.state.form.username.toLowerCase(), {path: "/"});
+            alert(response.message)
+          })
+        }
+      })
+      .catch(error => {
+        console.log(error)
+      })
   }
 
   render() {
     return (
-      <form>
+      <div>
+        <label>User: </label>
+        <br />
         <input
           type="text"
           className="form-control"
           name="username"
-          placeholder="Username"
           onChange={this.handleChange}
         />
-        <button
-          type="submit"
-          onClick={this.session()}
-        >
-        Login</button>
-      </form>
+        <button onClick={() => this.session()}>Login</button>
+      </div>
     )
   }
 }
