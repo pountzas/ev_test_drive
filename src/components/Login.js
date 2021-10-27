@@ -61,7 +61,6 @@ class Login extends React.Component {
         <br />
         <input
           type="text"
-          className="form-control"
           name="username"
           onChange={this.handleChange}
         />
