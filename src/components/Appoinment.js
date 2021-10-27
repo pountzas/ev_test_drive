@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const Appoinment = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+const Appoinment = () => (
+  <div />
+);
 
-export default Appoinment
+export default Appoinment;

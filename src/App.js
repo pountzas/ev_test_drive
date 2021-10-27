@@ -14,7 +14,6 @@ import Login from './components/Login';
 // import CarPage from './Pages/CarPage';
 import HomePage from './Pages/HomePage';
 
-
 function App() {
   return (
     <BrowserRouter>

@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const CarItem = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+const CarItem = () => (
+  <div />
+);
 
-export default CarItem
+export default CarItem;

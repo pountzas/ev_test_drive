@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const CarPage = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+const CarPage = () => (
+  <div />
+);
 
-export default CarPage
+export default CarPage;
