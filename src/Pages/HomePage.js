@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Cookies from 'universal-cookie';
 import Nav from '../components/Nav';
+import { fetchCars } from '../redux/cars/cars.actions';
+import Cars from '../components/Cars';
 
 const HomePage = () => {
   const cookies = new Cookies();
@@ -9,11 +12,16 @@ const HomePage = () => {
       window.location.href = './';
     }
   });
-
+  const { carReducer } = useSelector((state) => state);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchCars());
+  }, []);
   return (
     <div>
-      <h1>Home Page</h1>
       <Nav />
+      <h1>Home Page</h1>
+      <Cars cars={carReducer} />
     </div>
   );
 };
