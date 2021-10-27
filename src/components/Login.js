@@ -32,6 +32,7 @@ class Login extends React.Component {
         if (res.find(e => e.username === this.state.form.username.toLowerCase())) {
           alert(`Welcome ${this.state.form.username}`);
           cookies.set('username', this.state.form.username.toLowerCase(), {path: "/"});
+          window.location.href="./home";
         } else {
           const body= { username: this.state.form.username.toLowerCase() };
           axios.post(signUp, body)
@@ -41,6 +42,7 @@ class Login extends React.Component {
           .then(response => {
             cookies.set('username', this.state.form.username.toLowerCase(), {path: "/"});
             alert(response.message)
+            window.location.href="./home";
           })
         }
       })
@@ -48,6 +50,13 @@ class Login extends React.Component {
         console.log(error)
       })
   }
+
+  componentDidMount() {
+    if(cookies.get('username')){
+        window.location.href="./home";
+    }
+  }
+
 
   render() {
     return (
