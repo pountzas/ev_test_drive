@@ -18,9 +18,8 @@ const HomePage = () => {
     dispatch(fetchCars());
   }, []);
   return (
-    <div>
+    <div className="d-flex">
       <Nav />
-      <h1>Home Page</h1>
       <Cars cars={carReducer} />
     </div>
   );
