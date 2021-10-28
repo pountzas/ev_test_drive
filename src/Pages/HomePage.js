@@ -16,7 +16,7 @@ const HomePage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCars());
-  }, []);
+  }, [dispatch]);
   return (
     <div className="d-flex">
       <Nav />

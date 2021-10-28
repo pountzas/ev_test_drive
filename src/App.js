@@ -11,6 +11,7 @@ import Login from './components/Login';
 // import CarPage from './Pages/CarPage';
 import HomePage from './Pages/HomePage';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AddCarPage from './Pages/AddCarPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Login} />
         <Route exact path="/home" component={HomePage} />
+        <Route exact path="/add-car" component={AddCarPage} />
       </Switch>
     </BrowserRouter>
   );
