@@ -1,26 +1,39 @@
 import React from 'react';
 
-export default class AddCarForm extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      name: '',
+      model: '',
+      description: '',
       image: {},
     };
   }
 
-  onChange = (e) => {
+  onChange = async (e) => {
     e.persist();
-    this.setState(() => ({
+    await this.setState(() => ({
       [e.target.name]: e.target.files[0],
     }));
   }
 
-  onSubmit = (e) => {
+  onSubmit = async (e) => {
     e.preventDefault();
+    await this.setState(() => ({
+      [e.target.name.name]: e.target.name.value,
+      [e.target.model.name]: e.target.model.value,
+      [e.target.description.name]: e.target.description.value,
+    }));
+    const {
+      model, name, description, image,
+    } = this.state;
     const form = new FormData();
-    form.append('image', this.state.image);
-    console.log(form)
-    fetch('https://ev-backend-api.herokuapp.com/cars', {
+    await form.append('image', image);
+    form.append(e.target.name.name, name);
+    form.append(e.target.model.name, model);
+    form.append(e.target.description.name, description);
+    fetch('http://localhost:3000/items', {
       method: 'POST',
       body: form,
     });
@@ -31,8 +44,25 @@ export default class AddCarForm extends React.Component {
       <div className="form">
         <h1>New Upload</h1>
         <form onSubmit={this.onSubmit}>
-          <label>Image Upload</label>
-          <input type="file" name="image" onChange={this.onChange} />
+          <label htmlFor="image">
+            Image Upload
+            <input type="file" name="image" onChange={this.onChange} />
+          </label>
+          <br />
+          <label htmlFor="name">
+            Name
+            <input type="text" name="name" />
+          </label>
+          <br />
+          <label htmlFor="model">
+            Model
+            <input type="text" name="model" />
+          </label>
+          <br />
+          <label htmlFor="description">
+            Description
+            <input type="text" name="description" />
+          </label>
           <br />
           <input type="submit" />
         </form>
