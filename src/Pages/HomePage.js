@@ -16,11 +16,10 @@ const HomePage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCars());
-  }, []);
+  }, [dispatch]);
   return (
-    <div>
+    <div className="d-flex">
       <Nav />
-      <h1>Home Page</h1>
       <Cars cars={carReducer} />
     </div>
   );
