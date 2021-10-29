@@ -1,4 +1,7 @@
 import React from 'react';
+import axios from 'axios';
+
+const baseUrl = 'https://ev-backend-api.herokuapp.com/cars';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -33,9 +36,10 @@ export default class App extends React.Component {
     form.append(e.target.name.name, name);
     form.append(e.target.model.name, model);
     form.append(e.target.description.name, description);
-    fetch('http://localhost:3000/items', {
-      method: 'POST',
-      body: form,
+    await axios.post(baseUrl, form)
+    .then((response) => response.data)
+    .then((response) => {
+      console.log(response);
     });
   }
 
