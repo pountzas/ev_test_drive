@@ -37,10 +37,10 @@ export default class App extends React.Component {
     form.append(e.target.model.name, model);
     form.append(e.target.description.name, description);
     await axios.post(baseUrl, form)
-    .then((response) => response.data)
-    .then((response) => {
-      console.log(response);
-    });
+      .then((response) => response.data)
+      .then((response) => {
+        console.log(response);
+      });
   }
 
   render() {
