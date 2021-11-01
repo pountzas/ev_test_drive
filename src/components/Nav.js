@@ -2,13 +2,14 @@ import React from 'react';
 import Cookies from 'universal-cookie';
 import { NavLink } from 'react-router-dom';
 import EV from '../assets/EV.png';
+import './Nav.css';
 
 const cookies = new Cookies();
 
 const Nav = () => (
   <nav className="nav-panel">
-    <div className="nav-panel__logo">
-      <img src={EV} alt="EV-in" />
+    <div className="nav-panel-logo">
+      <img className="mx-auto" src={EV} alt="EV-in" />
     </div>
     <ul>
       <li>
@@ -37,18 +38,19 @@ const Nav = () => (
         </NavLink>
       </li>
       <li>
-        <button
+        <NavLink
           type="button"
           className="nav-link"
           onClick={() => {
             localStorage.clear();
-            window.location.reload();
+            // window.location.reload();
             delete window.localStorage.token;
-            cookies.set('username', '', { path: '/' });
+            cookies.set('username', '');
           }}
+          to="/"
         >
           Logout
-        </button>
+        </NavLink>
       </li>
     </ul>
 
