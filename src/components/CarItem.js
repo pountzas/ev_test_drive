@@ -1,3 +1,4 @@
+/* eslint react/prop-types: 0 */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './CarItem.css';
@@ -22,7 +23,7 @@ const CarItem = (props) => {
       </div>
       <div>
         <Link
-          to="/appointments"
+          to={`/cars/${car.id}`}
           className="btn btn-secondary mb-2"
           type="button"
         >
