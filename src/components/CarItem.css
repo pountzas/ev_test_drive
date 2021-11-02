@@ -4,9 +4,8 @@
 }
 
 .car-image {
-  width: 95%;
-  height: 10vh;
-  object-fit: cover;
+  min-height: 200px;
+  max-height: 200px;
 }
 
 .description {
