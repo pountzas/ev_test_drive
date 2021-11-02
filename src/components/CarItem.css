@@ -1,0 +1,40 @@
+.green-bg {
+  width: 20vw;
+  background-color: #97bf0f;
+}
+
+.car-image {
+  width: 95%;
+  height: 10vh;
+  object-fit: cover;
+}
+
+.description {
+  width: 18vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.classes-social-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 1rem; */
+}
+
+.classes-social-icon-circle {
+  width: 26px;
+  height: 26px;
+  padding: 0px;
+  margin: 0 6px;
+  border: 2px solid lightgreen;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.classes-social-icon {
+  padding: 1px;
+  color: lightgreen;
+  fill: lightgreen;
+}
