@@ -1,9 +1,8 @@
+/* eslint-disable import/extensions */
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import Cookies from 'universal-cookie';
-import Nav from '../components/Nav';
-import { fetchCars } from '../redux/cars/cars.actions';
-import Cars from '../components/Cars';
+import Nav from './Nav';
+import Cars from './Cars';
 
 const HomePage = () => {
   const cookies = new Cookies();
@@ -12,10 +11,7 @@ const HomePage = () => {
       window.location.href = './';
     }
   });
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchCars());
-  }, [dispatch]);
+
   return (
     <div className="d-flex">
       <Nav />
