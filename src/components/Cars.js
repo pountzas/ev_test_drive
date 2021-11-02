@@ -11,11 +11,10 @@ const Cars = () => {
   const { carsReducer } = useSelector((state) => state);
   return (
     <div className="text-center container">
-      <h1>EV models</h1>
-      <h2>Car List</h2>
+      <h1 className="py-5">EV models</h1>
+      <h2 className="py-3">Car List</h2>
       <section className="services" id="projects">
         <div className="max-width">
-          <h2 className="title d-flex">My Projects</h2>
           <CarouselProvider
             naturalSlideWidth={100}
             naturalSlideHeight={125}
@@ -24,7 +23,7 @@ const Cars = () => {
             isIntrinsicHeight
           >
             <div className="d-flex align-items-baseline">
-              <ButtonBack className="btn btn-primary">Back</ButtonBack>
+              <ButtonBack className="btn btn-primary mx-5">Back</ButtonBack>
               <Slider>
                 {carsReducer.map((element) => (
                   <Slide index={element.id} key={element.id}>
