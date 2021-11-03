@@ -2,9 +2,8 @@ import React from 'react';
 import {
   CarouselProvider, Slider, Slide, ButtonBack, ButtonNext,
 } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
-
 import { useSelector } from 'react-redux';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 import CarItem from './CarItem';
 
 const Cars = () => {
@@ -34,7 +33,6 @@ const Cars = () => {
               <ButtonNext className="btn btn-primary">Next</ButtonNext>
             </div>
           </CarouselProvider>
-
         </div>
       </section>
     </div>

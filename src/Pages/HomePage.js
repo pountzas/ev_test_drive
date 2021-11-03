@@ -1,8 +1,7 @@
-/* eslint-disable import/extensions */
 import React, { useEffect } from 'react';
 import Cookies from 'universal-cookie';
-import Nav from './Nav';
-import Cars from './Cars';
+import Nav from '../components/Nav';
+import Cars from '../components/Cars';
 
 const HomePage = () => {
   const cookies = new Cookies();
