@@ -55,6 +55,11 @@ To get a local copy up and running follow these simple example steps.
 
 -Go to `http://localhost:3000/` in you preferred browser.
 
+### Tips
+- This section is going to be updated or deleted later:
+
+- You can login or create a user account in the same login page, if the user you wrote doesnt exist, then it will be created in the deployed backend url.
+
 ## Authors
 
 👤 **Nikos Pountzas**
