@@ -1,4 +1,3 @@
-/* eslint react/prop-types: 0 */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './CarItem.css';
@@ -38,6 +37,7 @@ const CarItem = (props) => {
 export default CarItem;
 CarItem.propTypes = {
   car: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     name: PropTypes.string,
     description: PropTypes.string,
     image: PropTypes.string,

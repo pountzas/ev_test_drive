@@ -1,7 +1,6 @@
-/* eslint-disable import/extensions */
-/* eslint react/prop-types: 0 */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Nav from '../components/Nav';
 
 const CarPage = (props) => {
@@ -15,7 +14,7 @@ const CarPage = (props) => {
         <h2>{car.model}</h2>
         <p className="ms-5">{car.description}</p>
         <Link
-          to={`/appointments/${car.id}`}
+          to="/appointments"
           className="btn btn-secondary"
           type="button"
         >
@@ -27,3 +26,11 @@ const CarPage = (props) => {
 };
 
 export default CarPage;
+CarPage.propTypes = {
+  car: PropTypes.shape({
+    name: PropTypes.string,
+    description: PropTypes.string,
+    image: PropTypes.string,
+    model: PropTypes.string,
+  }).isRequired,
+};

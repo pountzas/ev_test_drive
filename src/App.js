@@ -11,6 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AddCarPage from './Pages/AddCarPage';
 import RemoveCarPage from './Pages/RemoveCarPage';
 import CarPage from './Pages/CarPage';
+import AppointmentsPage from './Pages/AppointmentsPage';
+import MyAppointments from './components/MyAppointments';
 
 function App() {
   const dispatch = useDispatch();
@@ -30,6 +32,8 @@ function App() {
             <CarPage car={data} key={data.id} />
           </Route>
         ))}
+        <Route path="/appointments" component={AppointmentsPage} />
+        <Route path="/myappointments" component={MyAppointments} />
       </Switch>
     </BrowserRouter>
   );
