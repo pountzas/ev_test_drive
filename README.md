@@ -1,8 +1,14 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Capstone API
+# Electric vehicles Front End
 
-> In this Capstone  for [Microverse](https://microverse.io) platform.
+> Front end for [Microverse](https://microverse.io) final capstone project.
+
+## About
+
+This project implements the feature of consuming APIS for create and delete items from our own backend deployed with heroku, following requirements by Microverse and [this concept design](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) by [Murat Korkmaz](https://www.behance.net/muratk).
+
+This React/Redux front-end app consumes the Ruby on Rails, API-only, back-end app from [this repo](https://github.com/carloso0114/appointments-API).
 
 ## Built With
 
@@ -10,14 +16,19 @@
 - CSS
 - Javascript
 - Webpack-cli
+- React
+- Redux
 
 ## Live Demo
-<!-- 
-[Movie Love Live!](https://pountzas.github.io/Capstone-Webapp-API/)
+<!-- [Todo!](todo) -->
 
-## Live Video
+## Kanban Board
 
-[Movie Video loom!](https://www.loom.com/share/00f75e8a33e742e49984e1dee495a388) -->
+This project's tasks are described in [this kanban board](https://github.com/carloso0114/appointments-API/projects/1).
+
+![kanban](https://user-images.githubusercontent.com/14119855/138367885-5fac4c25-2d61-419e-a64c-a421623735be.png)
+
+Number of team members: 2
 
 ## Getting Started
 
@@ -31,28 +42,18 @@ To get a local copy up and running follow these simple example steps.
 
 - Use your github account and your terminal to clone this repository to your computer:
 
-`https://github.com/pountzas/Capstone-Webapp-API.git`
+`https://github.com/pountzas/ev_test_drive`
 
 - Go to the cloned directory:
-`cd Capstone-Webapp-API`
+`cd ev_test_drive`
 
 - Run the following command to install dependencies:
 `npm install`
 
 - Run the command to run the build:
-`npm run build`
+`npm start`
 
-- Run the following command to compile the files for production:
-`npx webpack serve`
-
-### Usage
-
-Run dist/index.html in your preferred browser.
-
-<!-- ### Run tests
-
-- On the terminal `cd` to the folder you just cloned.
-- On the terminal type `rspec`. -->
+-Go to `http://localhost:3000/` in you preferred browser.
 
 ## Authors
 
@@ -62,11 +63,16 @@ Run dist/index.html in your preferred browser.
 - Twitter: [@pountzas20](https://twitter.com/pountzas20)
 - LinkedIn: [Nikos Pountzas](https://www.linkedin.com/in/nikos-pountzas/)
 
+👤 **Carloso0114**
+
+- GitHub: [carloso0114](https://github.com/carloso0114)
+- LinkedIn: [Carlos Ospina](https://www.linkedin.com/in/carlosospina/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/pountzas/Capstone-Webapp-API/issues).
+Feel free to check the [issues page](https://github.com/pountzas/ev_test_drive/issues).
 
 ## Show your support
 
@@ -74,86 +80,5 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.![](https://img.shields.io/badge/Microverse-blueviolet)
-
-# Capstone API
-
-> In this Capstone i have chosen a Movie app for [Microverse](https://microverse.io) platform.
-
-## Built With
-
-- HTML
-- CSS
-- Javascript
-- Webpack-cli
-
-## Live Demo
-
-[Movie Love Live!](https://pountzas.github.io/Capstone-Webapp-API/)
-
-## Live Video
-
-[Movie Video loom!](https://www.loom.com/share/00f75e8a33e742e49984e1dee495a388)
-
-## Getting Started
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-  
-- Node.js
-
-### Setup
-
-- Use your github account and your terminal to clone this repository to your computer:
-
-`https://github.com/pountzas/Capstone-Webapp-API.git`
-
-- Go to the cloned directory:
-`cd Capstone-Webapp-API`
-
-- Run the following command to install dependencies:
-`npm install`
-
-- Run the command to run the build:
-`npm run build`
-
-- Run the following command to compile the files for production:
-`npx webpack serve`
-
-### Usage
-
-Run dist/index.html in your preferred browser.
-
-<!-- ### Run tests
-
-- On the terminal `cd` to the folder you just cloned.
-- On the terminal type `rspec`. -->
-
-## Authors
-
-👤 **Nikos Pountzas**
-
-- GitHub: [pountzas](https://github.com/pountzas)
-- Twitter: [@pountzas20](https://twitter.com/pountzas20)
-- LinkedIn: [Nikos Pountzas](https://www.linkedin.com/in/nikos-pountzas/)
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/pountzas/Capstone-Webapp-API/issues).
-
-## Show your support
-
-Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
+- Microverse
+- [Murat Korkmaz](https://www.behance.net/muratk) for the concept design of the front-end.
