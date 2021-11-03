@@ -22,7 +22,7 @@ const CarItem = (props) => {
       </div>
       <div>
         <Link
-          to="/appointments"
+          to={`/cars/${car.id}`}
           className="btn btn-secondary mb-2"
           type="button"
         >
@@ -37,6 +37,7 @@ const CarItem = (props) => {
 export default CarItem;
 CarItem.propTypes = {
   car: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     name: PropTypes.string,
     description: PropTypes.string,
     image: PropTypes.string,
