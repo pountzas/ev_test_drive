@@ -18,13 +18,8 @@ const Nav = () => (
         </NavLink>
       </li>
       <li>
-        <NavLink to="/appointments" className="nav-link" activeClassName="active-nav-link" exact>
+        <NavLink to="/appointments/1" className="nav-link" activeClassName="active-nav-link" exact>
           Test-Drive
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/shop" className="nav-link" activeClassName="active-nav-link" exact>
-          Shop
         </NavLink>
       </li>
       <li>
