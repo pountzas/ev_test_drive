@@ -18,13 +18,13 @@ const Nav = () => (
         </NavLink>
       </li>
       <li>
-        <NavLink to="/appointments" className="nav-link" activeClassName="active-nav-link" exact>
+        <NavLink to="/appointments/" className="nav-link" activeClassName="active-nav-link" exact>
           Test-Drive
         </NavLink>
       </li>
       <li>
-        <NavLink to="/shop" className="nav-link" activeClassName="active-nav-link" exact>
-          Shop
+        <NavLink to="/myappointments/" className="nav-link" activeClassName="active-nav-link" exact>
+          My Appointments
         </NavLink>
       </li>
       <li>
@@ -43,7 +43,6 @@ const Nav = () => (
           className="nav-link"
           onClick={() => {
             localStorage.clear();
-            // window.location.reload();
             delete window.localStorage.token;
             cookies.set('username', '');
           }}
@@ -53,10 +52,7 @@ const Nav = () => (
         </NavLink>
       </li>
     </ul>
-
   </nav>
-  //   <button type="button" onClick={() => logout()}>Logout</button>
-  // </ul>
 );
 
 export default Nav;
