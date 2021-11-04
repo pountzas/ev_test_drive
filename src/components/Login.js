@@ -2,6 +2,7 @@
 import React from 'react';
 import axios from 'axios';
 import Cookies from 'universal-cookie';
+import './Login.css';
 
 const baseUrl = 'https://ev-backend-api.herokuapp.com/users';
 const signUp = 'https://ev-backend-api.herokuapp.com/signup';
@@ -22,7 +23,7 @@ class Login extends React.Component {
     }
   }
 
-  handleChange=async (e) => {
+  handleChange = async (e) => {
     await this.setState({
       form: {
         [e.target.name]: e.target.value,
@@ -56,15 +57,19 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div>
-        <p>User: </p>
-        <br />
-        <input
-          type="text"
-          name="username"
-          onChange={this.handleChange}
-        />
-        <button type="button" onClick={() => this.session()}>Login</button>
+      <div className="main">
+        <p className="sign" align="center">Sign in</p>
+        <div className="form1">
+          <input
+            className="un"
+            type="text"
+            align="center"
+            placeholder="Username"
+            name="username"
+            onChange={this.handleChange}
+          />
+          <button className="submit" type="submit" align="center" onClick={() => this.session()}>Sign in</button>
+        </div>
       </div>
     );
   }
