@@ -1,3 +1,10 @@
 * {
   list-style-type: none;
 }
+
+@media (min-width: 769px) {
+  .resize-component {
+    min-width: 65vw;
+    max-width: 75vw;
+  }
+}

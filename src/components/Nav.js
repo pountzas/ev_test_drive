@@ -10,7 +10,7 @@ const Nav = () => (
   <nav className="nav-panel sm-m5">
     <div className="display-panel">
       <div className="nav-panel-logo">
-        <img className="mx-auto" src={EV} alt="EV-in" />
+        <img className="mx-auto test" src={EV} alt="EV-in" />
       </div>
       <ul>
         <li>

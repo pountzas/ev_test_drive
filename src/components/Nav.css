@@ -3,7 +3,8 @@
   flex-direction: column;
   position: static;
   height: 100vh;
-  width: var(--nav-panel-width);
+  min-width: 20vw;
+  max-width: 30vw;
   border-right: 3px solid #eee;
 }
 
@@ -41,5 +42,12 @@
 @media (min-width: 769px) {
   .display-hamburger {
     display: none;
+  }
+}
+
+/* when the hamburguer menu dissapear */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .test {
+    max-width: 20vw;
   }
 }
