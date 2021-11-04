@@ -7,51 +7,97 @@ import './Nav.css';
 const cookies = new Cookies();
 
 const Nav = () => (
-  <nav className="nav-panel">
-    <div className="nav-panel-logo">
-      <img className="mx-auto" src={EV} alt="EV-in" />
+  <nav className="nav-panel sm-m5">
+    <div className="display-panel">
+      <div className="nav-panel-logo">
+        <img className="mx-auto" src={EV} alt="EV-in" />
+      </div>
+      <ul>
+        <li>
+          <NavLink to="/home" className="nav-link" activeClassName="active-nav-link" exact>
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/appointments/" className="nav-link" activeClassName="active-nav-link" exact>
+            Test-Drive
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/myappointments/" className="nav-link" activeClassName="active-nav-link" exact>
+            My Appointments
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/add-car" className="nav-link" activeClassName="active-nav-link" exact>
+            Add Car
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/remove-car" className="nav-link" activeClassName="active-nav-link" exact>
+            Remove Car
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            type="button"
+            className="nav-link"
+            onClick={() => {
+              localStorage.clear();
+              delete window.localStorage.token;
+              cookies.set('username', '');
+            }}
+            to="/"
+          >
+            Logout
+          </NavLink>
+        </li>
+      </ul>
     </div>
-    <ul>
-      <li>
-        <NavLink to="/home" className="nav-link" activeClassName="active-nav-link" exact>
-          Home
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/appointments/" className="nav-link" activeClassName="active-nav-link" exact>
-          Test-Drive
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/myappointments/" className="nav-link" activeClassName="active-nav-link" exact>
-          My Appointments
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/add-car" className="nav-link" activeClassName="active-nav-link" exact>
-          Add Car
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/remove-car" className="nav-link" activeClassName="active-nav-link" exact>
-          Remove Car
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          type="button"
-          className="nav-link"
-          onClick={() => {
-            localStorage.clear();
-            delete window.localStorage.token;
-            cookies.set('username', '');
-          }}
-          to="/"
-        >
-          Logout
-        </NavLink>
-      </li>
-    </ul>
+    <div className="display-hamburger">
+      <i className="bi bi-list h1" data-bs-toggle="dropdown" aria-expanded="false" />
+      <ul className="dropdown-menu dropdown-menu-end">
+        <li>
+          <NavLink to="/home" className="nav-link" activeClassName="active-nav-link" exact>
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/appointments/" className="nav-link" activeClassName="active-nav-link" exact>
+            Test-Drive
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/myappointments/" className="nav-link" activeClassName="active-nav-link" exact>
+            My Appointments
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/add-car" className="nav-link" activeClassName="active-nav-link" exact>
+            Add Car
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/remove-car" className="nav-link" activeClassName="active-nav-link" exact>
+            Remove Car
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            type="button"
+            className="nav-link"
+            onClick={() => {
+              localStorage.clear();
+              delete window.localStorage.token;
+              cookies.set('username', '');
+            }}
+            to="/"
+          >
+            Logout
+          </NavLink>
+        </li>
+      </ul>
+    </div>
   </nav>
 );
 

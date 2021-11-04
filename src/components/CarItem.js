@@ -7,10 +7,10 @@ import SocialIcons from './socialIcons';
 const CarItem = (props) => {
   const { car } = props;
   return (
-    <div className="green-bg">
+    <div className="green-bg border-0">
       <div className="card border-0">
         <img className="card-img-top car-image" src={car.image} alt="carPics" />
-        <div className="text green-bg">
+        <div className="green-bg">
           <h1 className="fw-bold">
             {car.name}
           </h1>
@@ -26,7 +26,7 @@ const CarItem = (props) => {
           className="btn btn-secondary mb-2"
           type="button"
         >
-          more...
+          Details
         </Link>
       </div>
       <SocialIcons />

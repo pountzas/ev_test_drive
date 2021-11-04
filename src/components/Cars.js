@@ -22,15 +22,15 @@ const Cars = () => {
             isIntrinsicHeight
           >
             <div className="d-flex align-items-baseline justify-content-between">
-              <ButtonBack className="btn btn-primary ms-5">Back</ButtonBack>
-              <Slider className="container ms-4">
+              <ButtonBack className="bi bi-caret-left-fill border-0 h2 bg-white" />
+              <Slider className="ms-4">
                 {carsReducer.map((element) => (
                   <Slide index={element.id} key={element.id}>
                     <CarItem car={element} key={element.id} />
                   </Slide>
                 ))}
               </Slider>
-              <ButtonNext className="btn btn-primary">Next</ButtonNext>
+              <ButtonNext className="bi bi-caret-right-fill border-0 h2 bg-white" />
             </div>
           </CarouselProvider>
         </div>

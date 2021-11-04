@@ -8,6 +8,7 @@ import './App.css';
 import Login from './components/Login';
 import HomePage from './Pages/HomePage';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import AddCarPage from './Pages/AddCarPage';
 import RemoveCarPage from './Pages/RemoveCarPage';
 import CarPage from './Pages/CarPage';
