@@ -23,9 +23,10 @@
   .display-panel {
     display: none;
   }
+
   .nav-panel {
     display: block;
-    border-right: 0px;
+    border-right: 0;
     min-width: 1vw;
   }
 }
@@ -35,6 +36,7 @@
   .display-hamburger {
     display: none;
   }
+
   .nav-panel {
     display: flex;
     flex-direction: column;
