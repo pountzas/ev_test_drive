@@ -2,9 +2,25 @@
   list-style-type: none;
 }
 
+@media only screen and (max-width: 768px) {
+  .responsive-car-image {
+    width: 100vw;
+  }
+}
+
 @media (min-width: 769px) {
   .resize-component {
     min-width: 65vw;
     max-width: 75vw;
   }
+
+  .responsive-flex {
+    display: flex;
+  }
+
+  .responsive-car-image {
+    width: 60vw;
+    height: 60vh;
+  }
 }
+

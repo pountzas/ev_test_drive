@@ -3,7 +3,7 @@ import Nav from '../components/Nav';
 import RemoveCarForm from '../components/RemoveCarForm';
 
 const AddCarPage = () => (
-  <div className="d-flex">
+  <div className="responsive-flex">
     <Nav />
     <RemoveCarForm />
   </div>

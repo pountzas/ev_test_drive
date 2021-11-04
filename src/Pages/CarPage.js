@@ -6,9 +6,9 @@ import Nav from '../components/Nav';
 const CarPage = (props) => {
   const { car } = props;
   return (
-    <div className="d-flex justify-content-between">
+    <div className="responsive-flex">
       <Nav />
-      <img className="img-float align-self-center" src={car.image} alt="car" />
+      <img className="responsive-car-image" src={car.image} alt="car" />
       <div className="align-self-center text-end pe-5">
         <h1 className="fw-bold">{car.name}</h1>
         <h2>{car.model}</h2>

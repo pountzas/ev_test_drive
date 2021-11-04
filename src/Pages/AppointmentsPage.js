@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from '../components/Nav';
 
 const AppointmentsPage = () => (
-  <div className="d-flex">
+  <div className="responsive-flex">
     <Nav />
     <div>
       <h1>Appointments</h1>

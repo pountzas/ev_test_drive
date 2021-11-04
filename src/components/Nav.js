@@ -7,7 +7,7 @@ import './Nav.css';
 const cookies = new Cookies();
 
 const Nav = () => (
-  <nav className="nav-panel sm-m5">
+  <nav className="nav-panel">
     <div className="display-panel">
       <div className="nav-panel-logo">
         <img className="mx-auto img-responsive" src={EV} alt="EV-in" />

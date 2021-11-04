@@ -12,7 +12,7 @@ const HomePage = () => {
   });
 
   return (
-    <div className="d-flex">
+    <div className="responsive-flex">
       <Nav />
       <Cars />
     </div>
