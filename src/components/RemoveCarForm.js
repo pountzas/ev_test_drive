@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
+import './AddRemoveCarForm.css';
 
 const baseUrl = 'https://ev-backend-api.herokuapp.com/cars';
 
@@ -14,20 +15,17 @@ const RemoveCarForm = () => {
   };
 
   return (
-    <div>
-      <h1>Remove Car</h1>
-      <form onSubmit={onSubmit} id="carform">
-        <label htmlFor="car-id">
-          Car name
-          <select form="carform" name="select">
-            {
-              carsReducer.map((element) => (
-                <option key={element.id} value={element.id}>{element.name}</option>
-              ))
-            }
-          </select>
-        </label>
-        <button type="submit">Remove Car</button>
+    <div className="form">
+      <h1 className="title-new">Remove Car</h1>
+      <form onSubmit={onSubmit} id="carform" className="form1">
+        <select form="carform" name="select" className="un">
+          {
+            carsReducer.map((element) => (
+              <option key={element.id} value={element.id}>{element.name}</option>
+            ))
+          }
+        </select>
+        <button className="submit" type="submit">Remove Car</button>
       </form>
     </div>
   );
