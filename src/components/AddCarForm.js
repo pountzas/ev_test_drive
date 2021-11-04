@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import React from 'react';
 import axios from 'axios';
+import './AddRemoveCarForm.css';
 
 const baseUrl = 'https://ev-backend-api.herokuapp.com/cars';
 
@@ -47,29 +48,17 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="form">
-        <h1>New Upload</h1>
-        <form onSubmit={this.onSubmit}>
-          <label htmlFor="image">
-            Image Upload
-            <input type="file" name="image" onChange={this.onChange} />
-          </label>
+        <h1 className="title-new">New Car</h1>
+        <form onSubmit={this.onSubmit} className="form1">
+          <input type="file" name="image" onChange={this.onChange} className="un" />
           <br />
-          <label htmlFor="name">
-            Name
-            <input type="text" name="name" />
-          </label>
+          <input type="text" name="name" className="un" placeholder="Name" />
           <br />
-          <label htmlFor="model">
-            Model
-            <input type="text" name="model" />
-          </label>
+          <input type="text" name="model" className="un" placeholder="Model" />
           <br />
-          <label htmlFor="description">
-            Description
-            <input type="text" name="description" />
-          </label>
+          <input type="text" name="description" className="un" placeholder="Description" />
           <br />
-          <input type="submit" />
+          <input className="submit" type="submit" />
         </form>
       </div>
     );
