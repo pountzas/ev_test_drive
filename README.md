@@ -19,8 +19,9 @@ This React/Redux front-end app consumes the Ruby on Rails, API-only, back-end ap
 - React
 - Redux
 
-## Live Demo
-<!-- [Todo!](todo) -->
+## Live Version
+
+[EV-cars!](https://amazing-lovelace-21bef2.netlify.app/home)
 
 ## Kanban Board
 
