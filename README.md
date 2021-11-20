@@ -10,6 +10,9 @@ This project implements the feature of consuming APIS for create and delete item
 
 This React/Redux front-end app consumes the Ruby on Rails, API-only, back-end app from [this repo](https://github.com/carloso0114/appointments-API).
 
+![](./project.png)
+<!-- ![Semantic description of image](/images/path/to/folder/image.png "Image Title") -->
+
 ## Built With
 
 - HTML
@@ -20,7 +23,9 @@ This React/Redux front-end app consumes the Ruby on Rails, API-only, back-end ap
 - Redux
 
 ## Live Demo
-<!-- [Todo!](todo) -->
+https://amazing-lovelace-21bef2.netlify.app/home
+
+
 
 ## Kanban Board
 
